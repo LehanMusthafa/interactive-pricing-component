@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="text__wrapper">
+        <img src="images/pattern-circles.svg" alt="Circles" />
+        <h1 class="header__heading">Simple, traffic-based pricing</h1>
+        <p class="header__desc">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="pricing-slider">
+          <label class="form-slider">
+            <input
+              type="range"
+              id="slider"
+              name="slider"
+              min="0"
+              max="4"
+              step="1"
+              value="2"
+            />
+          </label>
+          <div class="pricing-slider-value">
+            <span id="rSliderValue">100k</span> Pageviews
+          </div>
+
+          <div class="pricing-items">
+            <div class="pricing-item">
+              <div class="pricing-item-inner">
+                <div class="pricing-item-content">
+                  <div class="pricing-item-header">
+                    <div class="pricing__wrapper">
+                      <span class="pricing-item-price-currency">$</span>
+                      <span class="pricing-item-price-amount">16.00</span>
+                      <span class="pricing-item-price-after-new">/ month</span>
+                      <span class="pricing-item-price-discount"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.75rem;
+            color: #858fad;
+            align-items: center;
+          "
+        >
+          <span>Monthly Billing</span>
+          <label class="switch">
+            <input type="checkbox" id="checkboxButton" />
+            <span class="slider round" id="buttonID"></span>
+          </label>
+          <span class="yearly__billing">Yearly Billing</span>
+        </div>
+
+        <hr />
+
+        <div class="footer__wrapper">
+          <div class="features-wrapper">
+            <ul class="features">
+              <li class="list-item">Unlimited websites</li>
+              <li class="list-item">100% data ownership</li>
+              <li class="list-item">Email reports</li>
+            </ul>
+          </div>
+
+          <div>
+            <button class="cta">Start my trial</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="newDiv"></div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
